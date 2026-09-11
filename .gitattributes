@@ -1,0 +1,6 @@
+# Particije moraju imati ista zavrsetka redaka lokalno i na CI runneru
+*.csv text eol=lf
+*.py  text eol=lf
+*.yml text eol=lf
+*.md  text eol=lf
+*.ps1 text eol=crlf

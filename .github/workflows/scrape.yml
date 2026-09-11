@@ -1,0 +1,45 @@
+name: Kvaliteta zraka
+
+on:
+  schedule:
+    # Mjerenja se osvježavaju na puni sat; :20 izbjegava i vršno opterećenje
+    # GitHub Actionsa na početku sata (tada se raspored zna odgoditi).
+    - cron: '20 * * * *'
+  workflow_dispatch:
+
+# Nikad dva zapisa u isti repo odjednom - inače se push-evi sudaraju.
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Dohvati očitanja
+        run: python scrape.py --no-db
+
+      - name: Commitaj nova očitanja
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if git diff --cached --quiet; then
+            echo 'Nema novih očitanja.'
+            exit 0
+          fi
+          git commit -m "Očitanje $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git pull --rebase --autostash
+          git push

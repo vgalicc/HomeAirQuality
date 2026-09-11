@@ -1,0 +1,8 @@
+# Izvedeni artefakti - obnovljivi iz dnevnih CSV particija preko build_db.py
+data/kvaliteta_zraka.db
+data/measurements.csv
+data/scrape.log
+
+__pycache__/
+*.pyc
+.venv/
