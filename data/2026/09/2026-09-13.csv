@@ -1,0 +1,30 @@
+station_id,station_name,measured_at,parameter,value,text_value,unit,fetched_at
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,NO2,14.2,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,O3,21.6,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,CO,205.3,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,SO2,3.8,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,PM10,7.2,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,PM2.5,5.3,,µg/m³,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,Temperatura,14.3,,°C,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,Vlažnost,82.9,,%,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,Buka,62.2,,dB,2026-09-12T22:18:56+00:00
+BpoVZnko4a,Trg Ivana Pavla II,2026-09-13T00:00,EAQI kategorija,,Dobro,,2026-09-12T22:18:56+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,NO2,46.9,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,O3,8.3,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,CO,381.9,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,SO2,7.1,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,PM10,8.3,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,PM2.5,4.3,,µg/m³,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,Temperatura,13.7,,°C,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,Vlažnost,86.7,,%,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,Buka,63.7,,dB,2026-09-12T22:18:58+00:00
+y0wgpaembO,Trg žrtava fašizma 8,2026-09-13T00:00,EAQI kategorija,,Prihvatljivo,,2026-09-12T22:18:58+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,CH3SH,4.6,,µg/m³,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,SO2,5.1,,µg/m³,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,NH3,6.7,,µg/m³,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,H2S,8.5,,µg/m³,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,Temperatura,12.7,,°C,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,Vlažnost,92.3,,%,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,Vjetar,,,,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,Oborine,0.0,,mm,2026-09-12T22:19:00+00:00
+rWwjvJVwyR,Kolodvorska ulica,2026-09-13T00:00,EAQI kategorija,,Dobro,,2026-09-12T22:19:00+00:00
