@@ -1,10 +1,8 @@
 name: Kvaliteta zraka
 
 on:
-  schedule:
-    # Mjerenja se osvježavaju na puni sat; :20 izbjegava i vršno opterećenje
-    # GitHub Actionsa na početku sata (tada se raspored zna odgoditi).
-    - cron: '20 * * * *'
+  # Satni dohvat i commit rade s lokalnog Windows zadatka (run_scrape.ps1).
+  # GitHubov raspored je ugašen: na javnom repou je bio neredovit.
   workflow_dispatch:
 
 # Nikad dva zapisa u isti repo odjednom - inače se push-evi sudaraju.

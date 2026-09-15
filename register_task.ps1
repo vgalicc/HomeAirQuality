@@ -15,11 +15,14 @@ $action = New-ScheduledTaskAction `
     -WorkingDirectory $root
 
 # Mjerenja se osvježavaju na puni sat i budu dostupna nekoliko minuta kasnije,
-# pa se čita u :20 svakog sata.
-$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).Date.AddMinutes(20) `
-    -RepetitionInterval (New-TimeSpan -Hours 1)
+# pa se čita u :39 svakog sata.
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).Date.AddMinutes(39) `
+    -RepetitionInterval (New-TimeSpan -Hours 1) `
+    -RepetitionDuration (New-TimeSpan -Days 3650)
 
 $settings = New-ScheduledTaskSettingsSet `
+    -AllowStartIfOnBatteries `
+    -DontStopIfGoingOnBatteries `
     -StartWhenAvailable `
     -DontStopOnIdleEnd `
     -ExecutionTimeLimit (New-TimeSpan -Minutes 10) `
@@ -30,6 +33,6 @@ Register-ScheduledTask -TaskName $taskName `
     -Action $action -Trigger $trigger -Settings $settings `
     -Force | Out-Null
 
-Write-Host "Zadatak '$taskName' registriran: svaki sat u :20."
+Write-Host "Zadatak '$taskName' registriran: svaki sat u :39."
 Write-Host "Provjera:  Get-ScheduledTask -TaskName '$taskName'"
 Write-Host "Test:      Start-ScheduledTask -TaskName '$taskName'"
