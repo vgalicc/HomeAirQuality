@@ -193,23 +193,28 @@ def parse_widget(svg):
             i = j
             continue
 
-        # Onečišćenje: oznaka, pa vrijednost, pa jedinica.
+        # Onečišćenje: oznaka, pa vrijednost, pa jedinica. Bez podatka ('--')
+        # widget izostavi jedinicu, pa sljedeći tekst može već biti iduća oznaka.
         if (
             kind == "text"
             and POLLUTANT_RE.match(val)
-            and i + 2 < len(tokens)
+            and i + 1 < len(tokens)
             and tokens[i + 1][0] == "text"
-            and tokens[i + 2][0] == "text"
         ):
             raw_value = tokens[i + 1][1].strip()
             value = parse_number(raw_value)
-            if value is not None or raw_value == "--":
+            if value is not None or re.fullmatch(r"-{2,}", raw_value):
+                has_unit = (
+                    i + 2 < len(tokens)
+                    and tokens[i + 2][0] == "text"
+                    and not POLLUTANT_RE.match(tokens[i + 2][1].strip())
+                )
                 readings.append({
                     "parameter": val,
                     "value": value,
-                    "unit": tokens[i + 2][1].strip(),
+                    "unit": tokens[i + 2][1].strip() if has_unit else "",
                 })
-                i += 3
+                i += 3 if has_unit else 2
                 continue
 
         i += 1
